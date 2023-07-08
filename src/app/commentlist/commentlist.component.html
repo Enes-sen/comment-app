@@ -1,0 +1,11 @@
+<div class="container" *ngFor="let comment of comments" style="margin-left:22%;">
+  <div class="row text-wrap">
+    <div class="col">
+      {{comment.writername}} | {{comment.date| date}}
+    </div>
+  </div>
+  <div class="row text-wrap">
+    {{comment.content}}
+    <button class="btn btn-danger" (click)="commentdel(comment)" style="margin-left:10%; width:10%;"><i class="fa fa-trash-o"></i></button>
+  </div>
+</div>
