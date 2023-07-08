@@ -1,0 +1,15 @@
+<form #commentForm="ngForm" (ngSubmit)="addComment(commentForm)">
+  <div class="text-dark">
+    <div class="mb-2" style="margin-left:20%;">
+      <input type="text" [(ngModel)]="commentModel.writername" class="form-control" style="width:80%;" id="writername"
+        name="writername" placeholder="*nick giriniz">
+    </div>
+    <div class="mb-2" style="margin-left:20%;">
+      <textarea class="form-control" [(ngModel)]="commentModel.content" style="width:80%;" id="content" name="content"
+        rows="2" cols="2" placeholder="yorum yapınız!"></textarea>
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="commentForm.invalid"
+      title="Yorum eklemek için tıklayınız" style="margin-left:73%; width:10%;"><i class="fa fa-plus"
+        style="font-size:1.2em;"></i></button>
+  </div>
+</form>
